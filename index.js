@@ -1,10 +1,35 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs')
+const generatedREADME = require('./utils/generateMarkdown.js')
 // TODO: Create an array of questions for user input
-const questions = [ Title , Description , Installation , Usage , Credits , License , Features , Contribute];
+// const generatedREADME = ({ Title , Description , Installation , Usage , Credits , License , Features , Contribute}) =>{
+//    return `
+//     # ${Title};
 
-const prompt = inquirer.createPromptModule();
+//     # Description;
+//     ${Description}
+    
+    
+//     # Installation;
+//     ${Installation}
+    
+//     # Credits;
+//     ${Credits}
+    
+//     # License;
+//     ${License} 
+    
+//     # Features;
+//     ${Features}
+
+//     # Contribute;
+//     ${Contribute}
+//     `
+// }
+
+
+{const prompt = inquirer.createPromptModule();
 inquirer.prompt([
 {
    type: "input",
@@ -62,4 +87,4 @@ fs.writeFile('README.md', generatedREADME, (err) => {
 function init() {}
 
 // Function call to initialize app
-init();
+init();}
