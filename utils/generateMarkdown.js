@@ -6,13 +6,13 @@ function renderLicenseBadge(license) {
    // Add links 
     switch (license) {
       case 'MIT':
-        licensechoice = '[MIT Badge link](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)'
+        licensechoice = '[![MIT Badge Link](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
       break;
       case 'Apache':
-        licensechoice = '[Apache Badge link](https://github.com/apache/.github/blob/main/LICENSE)'
+        licensechoice = '[![Apache Badge Link](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
       break;
       case 'GPL':
-        licensechoice = '[GNU General Public Library Badge link](https://github.com/collective/example.p4p5/blob/master/LICENSE.GPL)'
+        licensechoice = '[![GPL v3 Badge Link](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
       break;
     } 
     return licensechoice
@@ -70,9 +70,9 @@ function renderLicenseSection(license) {
       break;
       case 'Apache':
         licensechoice = `                               
-               Apache License
-           Version 2.0, January 2004
-         http://www.apache.org/licenses/
+              Apache License
+          Version 2.0, January 2004
+      http://www.apache.org/licenses/
 
       TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     `
@@ -108,9 +108,10 @@ const generatedREADME = ({ Title , Description , Installation , Usage , Credits 
    ${Credits}
    
    # License;
+   ${renderLicenseBadge(License)}
    ${renderLicenseLink(License)}
    ${renderLicenseSection(License)}
-   ${renderLicenseBadge(License)}
+   
    
    # Features;
    ${Features}

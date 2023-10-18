@@ -28,12 +28,11 @@ const generatedREADME = require('./utils/generateMarkdown.js')
 //     `
 // }
 
-
-{const prompt = inquirer.createPromptModule();
-inquirer.prompt([
+const prompt = inquirer.createPromptModule();
+    inquirer.prompt([
 {
    type: "input",
-   message: "What do you want to call your app",
+   message: "What are you going to call your new app?",
    name: "Title",
 },
 {
@@ -65,12 +64,13 @@ inquirer.prompt([
 {
     type: "list",
     message: "Do you want people to be able to contribute to your app?",
-    name: "License",
+    name: "Contribute",
     choices: ["OH YEAH", "NAH"]
   },
-])
-.then((answers) => {
-const README = generatedREADME(questions)
+    ]);
+  then((questions) => {
+ const answers = generatedREADME(questions)
+});
 
 
 
@@ -82,9 +82,9 @@ fs.writeFile('README.md', generatedREADME, (err) => {
       console.log('All data added to file successfully.');
     }
   })
-});
+
 // TODO: Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
-init();}
+init();
