@@ -1,35 +1,10 @@
-// TODO: Include packages needed for this application
+//Packages used to be able to create a new file from Node
 const inquirer = require('inquirer');
 const fs = require('fs')
 const generatedREADME = require('./utils/generateMarkdown.js')
-// TODO: Create an array of questions for user input
-// const generatedREADME = ({ Title , Description , Installation , Usage , Credits , License , Features , Contribute}) =>{
-//    return `
-//     # ${Title};
 
-//     # Description;
-//     ${Description}
-    
-    
-//     # Installation;
-//     ${Installation}
-    
-//     # Credits;
-//     ${Credits}
-    
-//     # License;
-//     ${License} 
-    
-//     # Features;
-//     ${Features}
-
-//     # Contribute;
-//     ${Contribute}
-//     `
-// }
-
-const prompt = inquirer.createPromptModule();
-    inquirer.prompt([
+  inquirer
+    .prompt([
 {
    type: "input",
    message: "What are you going to call your new app?",
@@ -37,17 +12,22 @@ const prompt = inquirer.createPromptModule();
 },
 {
   type: "input",
-  message: "give a brief description of your app",
+  message: "give a brief description of your project and any inspiration for creating it",
   name: "Description",
 },
 {
   type: "input",
-  message: "How does a user access your app(URL or Link to download)?",
+  message: "Provide a link to install your app",
   name: "Installation",
 },
 {
   type: "input",
-  message: "Did you get code or help from anyone you need to give credit to?",
+  message: "How can this be used?",
+  name: "usage",
+},
+{
+  type: "input",
+  message: "list any links or resources used to create your app. if none were used give yourself credit!",
   name: "Credits",
 },
 {
@@ -62,29 +42,25 @@ const prompt = inquirer.createPromptModule();
   name: "Features",
 },
 {
-    type: "list",
-    message: "Do you want people to be able to contribute to your app?",
-    name: "Contribute",
-    choices: ["OH YEAH", "NAH"]
-  },
-    ]);
-  then((questions) => {
- const answers = generatedREADME(questions)
-});
+  type: "input",
+  message: "What new features still need added or bugs fixed? if none input 'N/A'",
+  name: "Contribute",
+},
+    ])
+  .then((questions) => {
+ const YourREADME = generatedREADME (questions)
 
 
-
-// TODO: Create a function to write README file
-fs.writeFile('README.md', generatedREADME, (err) => {
+// Function that creates the new README.md file for you to copy and paste to your own Repo
+fs.writeFile('YourREADME.md', YourREADME , (err) => {
     if (err) {
       console.error('Error creating your file:', err);
     } else {
       console.log('All data added to file successfully.');
     }
   })
+});
 
-// TODO: Create a function to initialize app
 function init() {}
 
-// Function call to initialize app
 init();
