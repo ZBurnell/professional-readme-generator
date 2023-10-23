@@ -23,7 +23,7 @@ const generatedREADME = require('./utils/generateMarkdown.js')
 {
   type: "input",
   message: "How can this be used?",
-  name: "usage",
+  name: "Usage",
 },
 {
   type: "input",

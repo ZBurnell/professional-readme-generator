@@ -102,28 +102,38 @@ const generatedREADME = ({ Title , Description , Installation , Usage , Credits 
   # Description
    Hello and welcome to my application. Let me give you a quick rundown of the how and why I created it! ${Description}
 
+  # Table of Content
+   - [Title](#title)
+   - [Description](#description)
+   - [Installation](#installation)
+   - [Usage](#usage)
+   - [Credits](#credits)
+   - [License](#license)
+   - [Features](#features)
+   - [Contribute](#contribute)
+
   # Installation
    You can download and run my app by following this link ${Installation} or by accessing the repositroy on GitHub and following these steps. settings -> pages -> visit site.
    
   # Usage
-  ${Usage}
+   ${Usage}
 
   # Credits
-  ${Credits}
-  License Badge links used can be found here - https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+   ${Credits}
+   License Badge links used can be found here - https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
    
    
   # License
-  Here you will find a link to the license that protects my app
-  ${renderLicenseBadge(License)}
-  ${renderLicenseLink(License)}
-  ${renderLicenseSection(License)}
+   Here you will find a link to the license that protects my app
+   ${renderLicenseBadge(License)}
+   ${renderLicenseLink(License)}
+   ${renderLicenseSection(License)}
    
   # Features
-  ${Features}
+   ${Features}
 
   # Contribute
-  If you would like to contribute to my app I am currently working on implementing these new functions or fixing these bugs: ${Contribute}
+   If you would like to contribute to my app I am currently working on implementing these new functions or fixing these bugs: ${Contribute}
   `
 }
 module.exports = generatedREADME;
