@@ -104,28 +104,31 @@ const generatedREADME = ({ Title , Description , Installation , Usage , Credits 
 
   # Table of Content
 
-   - [Description](#description)
-   - [Installation](#installation)
-   - [Usage](#usage)
-   - [Credits](#credits)
-   - [License](#license)
-   - [Features](#features)
-   - [Contribute](#contribute)
+   1. [Description](#description)
+   2. [Installation](#installation)
+   3. [Usage](#usage)
+   4. [Credits](#credits)
+   5. [License](#license)
+   6. [Features](#features)
+   7. [Contribute](#contribute)
 
   # Installation
+
    You can download and run my app by following this link ${Installation} or by accessing the repositroy on GitHub and following these steps. 
    settings -> pages -> visit site.
    
   # Usage
+
    ${Usage}
 
   # Credits
+
    ${Credits}
-   Links to where the License Badges can be found -> [license badge]https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+   Links to where the License Badges can be found -> [license badge](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
    
    
   # License
-   Here you will find a link to the license that protects my app
+   
    ${renderLicenseBadge(License)}
    ${renderLicenseLink(License)}
    ${renderLicenseSection(License)}
